@@ -3,6 +3,10 @@ import Header from '../../components/Header'
 import Intro from './Intro'
 import About from './About'
 import Experiences from './Experiences'
+import Projects from './Projects'
+import Contact from './contact'
+import Footer from './Footer'
+import Leftsider from './Leftsider'
 
 
 
@@ -14,6 +18,10 @@ function Home() {
         <Intro />
       <About />
       <Experiences />
+      <Projects />
+      <Contact />
+      <Footer />
+      <Leftsider />
       </div>
 
     </div>

@@ -18,10 +18,15 @@
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #17643a;
+    background: #013f3c7f;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #17643a;
+    background: #013f3c7f;
+  }
+  i{cursor: pointer;}
+  i:hover{
+    color:white;
+    font-weight: bold;
   }

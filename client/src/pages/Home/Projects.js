@@ -1,14 +1,15 @@
-import React from "react";
-import SectionTitle from "../../components/SectionTitle";
-import { experiences } from "../../resources/experience";
-const Experiences = () => {
+import React from 'react'
+import SectionTitle from '../../components/SectionTitle';
+import { projects } from '../../resources/projects';
+const Projects = () => {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
+
   return (
     <div>
-      <SectionTitle title="Experience" />
-      <div className="flex py-10 gap-10 sm:gap:20 sm:flex-col">
+        <SectionTitle title="Projects"  />
+        <div className="flex py-10 gap-10 sm:gap:20 sm:flex-col">
         <div className="flex flex-col gap-1  border-l-2 border-[#135e4c82] w-1/3 sm:flex-row sm:overflow-x-scroll sm:w-full">
-          {experiences.map((experience, index) => {
+          {projects.map((project, index) => {
             return (
               <div
                 onClick={() => {
@@ -23,19 +24,21 @@ const Experiences = () => {
                       : "text-white"
                   } `}
                 >
-                  {experience.period}
+                  {project.title}
                 </h1>
               </div>
             );
           })}
         </div>
+      <div className='flex items-center justify-center gap-10 sm:flex-col'>  
+      <img src={projects[selectedItemIndex].image} alt="imagetext" className='h-60 w-72'></img>
+        
         <div className="flex flex-col gap-5">
           <h1 className="text-secondary text-xl py-5 sm:py-0">
-            {experiences[selectedItemIndex].title}
+            {projects[selectedItemIndex].title}
           </h1>
-          <h1 className="text-tertiary text-xl">
-            {experiences[selectedItemIndex].company}
-          </h1>
+         
+          <p className='text-white'>{projects[selectedItemIndex].descriptions}</p>
           <p className="text-white">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -43,10 +46,10 @@ const Experiences = () => {
             and scrambled it to m when an unknown printer took a galley of type
             and scrambled it to m
           </p>
-        </div>
+        </div></div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Experiences;
+export default Projects
